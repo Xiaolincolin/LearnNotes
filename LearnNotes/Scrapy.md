@@ -54,3 +54,67 @@ if match_obj:
 ```
 第一个`.*?`是非贪婪模式，本得出了想要的`xooooooooox`，但是由于括号中间
 的`.*`是贪婪模式，结果从右边匹配出了`xooooooooooxx`，只给了一个`xx`
+
+
+##二、scrapy框架
+
+###1.启程scrapy
+（1）进入虚拟环境后下载scrapy框架：`pip install -i https://pypi.douban.com/simple/ scrapy`,使用豆瓣可以加速
+（2）使用`scrapy startproject spidername`创建爬虫空间，`scrapy crawl spidername`启动
+
+
+###2.xpath选择器的语法结构
+![xp][xpath]
+
+![xp1][xpath1]
+
+
+![xp2][xpath2]
+
+####xpath函数应用
+在pycharm调试太慢，可以在虚拟空间进行调试：`scrapy shell url`
+
+	(1)`.extract()`:获取html的文本信息,是以列表形式
+	(2)`.strip()`:去掉空格
+	(3)`.replace("old"，"new")`:字符串替换
+	(4)`contains(@class, 'value')`:有些html标签的class有多个值，如想根据其中一个唯一的value找到这个标签就可以用这个函数
+	(5)`h1/text()`:获取标签h1的内容
+
+###3.css选择器的语法结构
+
+![cs][css]
+
+![cs1][css1]
+
+![cs2][css2]
+
+
+####css函数应用
+	(1)`.extract()`:获取html的文本信息,是以列表形式
+	(1.1)`extract_first("默认值")`:等同于`extract()[0]`只是为了避免跑出异常，默认值是没有的时候默认返回的值
+	(2)`.strip()`:去掉空格
+	(3)`.replace("old"，"new")`:字符串替换
+	(4)`h1::text`:获取h1标签的内容
+	(5)`a::attr(href)`:获取a的属性，加extract()可获得值
+
+
+
+###4、cookie与session的区别
+  (1)cookie的有状态请求的本地存储机制:当用户第一次访问服务器时，服务器保存用户的信息，并分配给用户一个ID，当用户下次再访问服务器时，服务器根据ID就可以识别用户的信息  
+  (2)session:其实是cooki在接收服务器返回的ID（包含个人信息）时，存在泄漏个人信息的微信，而seesion就是为了避免信息泄漏，将ID生成一段有生命周期的随机字符串，同时将ID对应的个人信息保存在服务器，下次浏览器只需发送服务器给的随机字符串即可，session是服务器机制。
+![cookie][cook]
+
+
+
+
+
+
+<!---  链接  -->  
+[xpath]:images/xpath.png
+[xpath1]:images/xpath1.png
+[xpath2]:images/xpath2.png
+
+[css]:images/css.png
+[css1]:images/css1.png
+[css2]:images/css2.png
+[cook]:images/cookie.png
