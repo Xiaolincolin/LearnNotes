@@ -113,7 +113,6 @@ if match_obj:
 [xpath]:images/xpath.png
 [xpath1]:images/xpath1.png
 [xpath2]:images/xpath2.png
-
 [css]:images/css.png
 [css1]:images/css1.png
 [css2]:images/css2.png
