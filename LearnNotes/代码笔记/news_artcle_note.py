@@ -13,7 +13,9 @@ from Spider.Article.items import dlfjItem
 page = 2
 
 
+#处理详情页
 class DlfjSpider(scrapy.Spider):
+
     name = 'dlfj'
     allowed_domains = ['http://www.jbshihua.com/index.php?m=content&c=index&a=lists&catid=40']
     start_urls = ['http://www.jbshihua.com/index.php?m=content&c=index&a=lists&catid=40']
@@ -112,6 +114,45 @@ class DlfjSpider(scrapy.Spider):
         yield yssh_item
 
 
+
+#pipelines页面，异步将数据插入数据库，只需要改字段值即可
+class MysqlTwistedPipeline(object):
+
+    def __init__(self, dbpool):
+        self.dbpool = dbpool
+
+    @classmethod
+    def from_settings(cls, setting):
+        dbparms = dict(
+        host = setting["MYSQL_HOST"],
+        db = setting['MYSQL_DBNAME'],
+        user = setting['MYSQL_USER'],
+        passwd = setting['MYSQL_PASSWORD'],
+        charset = 'utf8',
+        cursorclass = MySQLdb.cursors.DictCursor,
+        use_unicode=True,
+        )
+        dbpool = adbapi.ConnectionPool("MySQLdb", **dbparms)
+
+        return cls(dbpool)
+
+    def process_item(self, item, spider):
+        #使用twisted将mysql插入变成异步执行
+        query = self.dbpool.runInteraction(self.do_insert, item)
+        query.addErrback(self.handle_error)
+
+    def handle_error(self, failure, item, spider):
+         #处理异步插入的异常
+        print(failure)
+	
+	#只需要修改这一部分，前面通用
+    def do_insert(self,cursor, item):
+        insert_sql = """
+        insert into zjsh(title,create_time,content)
+        VALUES (%s,%s,%s)
+        """
+        cursor.execute(insert_sql, (item["title"], item["create_time"], item["content"]))
+   
 
 
 
