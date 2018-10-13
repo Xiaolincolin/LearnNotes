@@ -107,6 +107,17 @@ if match_obj:
 
 
 
+### 5、UA代理问题（user-agent）
+	(1)scrapy在对服务器进行请求时，在没有设置代理的情况下，默认使用的是scrapy代理，这样很容易被服务器识别为爬虫，可以对UA进行重写，使用`fake-useragent`可以使用做好的UA代理池。
+	(2)在'pip install fake-useragent'后'from fake_useragent'报错，原因是因为默认的版本过高，与py3.6不兼容，降低fake的版。
+	(3)但是又出现`ake_useragent.errors.FakeUserAgentError:`错误，最后还得升级回来`pip install fake-useragent --upgrade`
+	
+	    
+	 
+
+
+
+
 
 
 <!---  链接  -->  
