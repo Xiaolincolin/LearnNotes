@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学情预警综合分析平台</title>
+    <!-- 引入Bootstrap核心样式文件（必须） -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <!-- 你自己的样式或其他文件 -->
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/shops.css">
+    <!--站点图标-->
+    <link rel="shortcut icon" href="http://iph.href.lu/32x32?text=tb" type="image/x-icon">
+</head>
+    <body>
+        <div class="headerer">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <a href="login.html"> <img src="/static/static/images/logo.png" alt="" title=""> </a>
+                </div>
+                <div class="head-right">
+                    <div class="top-nav">
+                        <span class="menu"> <img src="/static/images/icon.png" alt=""/></span>
+                        <ul class="res">
+                            <li><a href="main.html">主页</a></li>
+                            <li><a class="active" href="stydy.html">知识扩充</a></li>
+                            <li><a href="me.html">个人中心</a></li>
+                            <li><a href="contact.html">联系我们</a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <!-- script-for-menu -->
+                        <script>
+                            $( "span.menu" ).click(function() {
+                                $( "ul.res" ).slideToggle( 300, function() {
+                                    // Animation complete.
+                                });
+                            });
+                        </script>
+                        <!-- /script-for-menu -->
+                    </div>
+
+                    <div class="social">
+                        <ul >
+                            <li><a class="fa" href="#"> </a></li>
+                            <li><a class="tw" href="#"> </a></li>
+                            <li><a class="p" href="#"> </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="search-box">
+                        <div id="sb-search" class="sb-search">
+                            <form>
+                                <input class="sb-search-input" placeholder="搜索" type="search" name="search" id="search">
+                                <input class="sb-search-submit" type="submit" value="">
+                                <span class="sb-icon-search"> </span>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <!-- search-scripts -->
+                    <script src="/static/js/classie.js"></script>
+                    <script src="/static/js/uisearch.js"></script>
+                    <script>
+                        new UISearch( document.getElementById( 'sb-search' ) );
+                    </script>
+                    <!-- //search-scripts -->
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+        <div class="wrapperto">
+            <div class="main-product-thumbnail">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="thubnail-desc fix gzxiangq">
+                                <h4 class="product-header col-xs-12 col-sm-12 col-md-12 col-lg-12">某某工作名称</h4>
+                                <div class="pro-price gzxiangqxx col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                    <p><span class="skuer">薪酬：</span><span class="price">￥300</span></p>
+                                    <p><span class="skuer">发布单位：</span><a href="#">XXXX科技有限公司</a></p>
+                                    <p><span class="skuer">工作时间：</span><span>9：00-18：00</span></p>
+                                    <p><span class="skuer">工作地点：</span><span>银川西夏区</span></p>
+                                    <p><span class="skuer">工作性质：</span><span>兼职</span></p>
+                                    <p><span class="skuer">招聘人数：</span><span>5</span>人</p>
+                                    <p><span class="skuer">联系方式：</span><span>13800000000</span></p>
+                                </div>
+                                <div class="pro-ref gzxiangqxx col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                                    <div>
+                                        <p class="skuer">工作内容：</p>
+                                        <p>工作内容和要求工作内容和要求工作内容和要求工作内容和要求工作内容和要求工作内容和要求工作内容和要求工作内容和要求工作内容和要求</p>
+                                    </div>
+                                    <div>
+                                        <p class="skuer">工作要求：</p>
+                                        <p>工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求工作要求</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer id="xq_footer" style="background: #121212;">
+            <div class="container">
+                <div class="row" style="padding-top: 10px;border: 0;">
+                    <p style="text-align: center;color: #efefef;">北方民族大学大数据团队 &copy;版权所有</p>
+                </div>
+            </div>
+    </footer>
+    </body>
+</html>

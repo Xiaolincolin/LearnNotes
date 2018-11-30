@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	<title>主页</title>
+	<link href="/static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="/static/js/jquery-1.11.0.min.js"></script>
+	<!-- Custom Theme files -->
+	<link href="/static/css/main.css" rel="stylesheet" type="text/css" media="all"/>
+	<link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="screen" />
+
+	<!-- Custom Theme files -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+	</script>
+	<meta name="keywords" content="Auction Responsive web template, Bootstrap Web Templates, Flat Web Templates, AndriodCompatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+	<script type="text/javascript" src="/static/js/move-top.js"></script>
+	<script type="text/javascript" src="/static/js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+</head>
+
+    <body>
+        <div class="headerer">
+            <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <a href="index.html"> <img src="/static/images/logo.png" alt="" title=""> </a>
+                </div>
+                <div class="head-right">
+                    <div class="top-nav">
+                        <span class="menu"> <img src="/static/images/icon.png" alt=""/></span>
+                        <ul class="res">
+                            <li><a class="active" href="main.html">主页</a></li>
+                            <li><a href="stydy.html">知识墙</a></li>
+                            <li><a href="tables.html">课程管理</a></li>
+                            <li><a href="me.html">个人中心</a></li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                        <!-- script-for-menu -->
+                        <script>
+                            $( "span.menu" ).click(function() {
+                                $( "ul.res" ).slideToggle( 300, function() {
+                                    // Animation complete.
+                                });
+                            });
+                        </script>
+                        <!-- /script-for-menu -->
+                    </div>
+
+                    <div class="social">
+                        <ul >
+                            <li><a class="fa" href="#"> </a></li>
+                            <li><a class="tw" href="#"> </a></li>
+                            <li><a class="p" href="#"> </a></li>
+                        </ul>
+                    </div>
+
+                    <div class="search-box">
+                        <div id="sb-search" class="sb-search">
+                            <form>
+                                <input class="sb-search-input" placeholder="搜索" type="search" name="search" id="search">
+                                <input class="sb-search-submit" type="submit" value="">
+                                <span class="sb-icon-search"> </span>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                    <!-- search-scripts -->
+                    <script src="/static/js/classie.js"></script>
+                    <script src="/static/js/uisearch.js"></script>
+                    <script>
+                        new UISearch( document.getElementById( 'sb-search' ) );
+                    </script>
+                    <!-- //search-scripts -->
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        </div>
+        <script src="/static/js/responsiveslides.min.js"></script>
+        <script>
+            $(function () {
+                $("#slider").responsiveSlides({
+                    auto: true,
+                    speed: 500,
+                    namespace: "callbacks",
+                    pager: false,
+                    nav:true,
+                });
+            });
+        </script>
+
+        <div class="banner">
+            <div class="container">
+                <div class="banner-main">
+                    <ul class="rslides" id="slider">
+
+                        <li>
+                            <h3>ACM大赛即将开赛</h3>
+                            <p>点击了解详情</p>
+                            <div class="bann-btn">
+                                <a href="www.baidu.com" class="hvr-shutter-out-horizontal">更多</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>全国大学生数学建模大赛</h3>
+                            <p>欢迎同学们踊跃报名</p>
+                            <div class="bann-btn">
+                                <a href="#" class="hvr-shutter-out-horizontal">更多</a>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>蓝桥杯大赛</h3>
+                            <p>相信自己!</p>
+                            <div class="bann-btn">
+                                <a href="#" class="hvr-shutter-out-horizontal">更多</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="banner-strip">
+            <div class="container">
+                <h3>点击此处可以了解更多关于大赛的信息</h3>
+                <div class="bann-strip-btn">
+                    <a href="#" class="hvr-shutter-out-horizontal">了解更多</a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+</body>
+</html>
